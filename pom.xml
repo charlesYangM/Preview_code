@@ -7,6 +7,13 @@
     <groupId>FreeLife</groupId>
     <artifactId>Preview</artifactId>
     <version>1.0-SNAPSHOT</version>
-
+    <dependencies>
+        <!-- java ee -->
+        <dependency>
+            <groupId>javax</groupId>
+            <artifactId>javaee-api</artifactId>
+            <version>7.0</version>
+        </dependency>
+    </dependencies>
 
 </project>

@@ -9,7 +9,7 @@ import java.util.Hashtable;
  * Created by CharlesYang on 2018/6/29/029.
  */
 public class FindPath {
-    private static ArrayList<Point> bans = new ArrayList<Point>(Arrays.asList(new Point(1, 3), new Point(2, 2)));
+    private static ArrayList<Point> bans = new ArrayList<Point>(Arrays.asList(new Point(0, 3), new Point(2, 2)));
 //    private static ArrayList<Point> bans = new ArrayList<Point>();
 
 
@@ -20,9 +20,11 @@ public class FindPath {
         path.add(p);
 
         boolean success = false;
+
         if (x == 0 && y == 0){
             return true;
         }
+
         if (cache.contains(p)){
             return cache.get(p);
         }
