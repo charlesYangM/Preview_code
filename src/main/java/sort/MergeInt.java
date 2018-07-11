@@ -24,7 +24,7 @@ public class MergeInt {
         merge(arr, low, mid, high);
     }
 
-    private static void merge(int[] arr, int low, int mid, int high) {
+    public static void merge(int[] arr, int low, int mid, int high) {
 
         int i = low, j = mid + 1;
 

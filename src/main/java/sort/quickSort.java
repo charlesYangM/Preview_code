@@ -13,7 +13,7 @@ public class quickSort {
         }
     }
 
-    private static void sort(int[] arr,int lo,int hi) {
+    public static void sort(int[] arr,int lo,int hi) {
         if (lo >= hi){
             return;
         }
