@@ -77,7 +77,7 @@ public class CGLibContainer {
     }
 
     private static <T> T createInstance(Class<T> cls) throws IllegalAccessException, InstantiationException {
-        if (!interceptMethodMap.containsKey(cls)){
+        if (!interceptMethodMap.containsKey(cls)){//如果不是我们的注解类，则对其进行简单的创建对象，这里得到保证是因为，container初始化的过程中会将类放在一个Map中
             return (T) cls.newInstance();
         }
         Enhancer enhancer = new Enhancer();

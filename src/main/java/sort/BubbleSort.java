@@ -27,11 +27,14 @@ public class BubbleSort {
         System.out.println("sort start");
         Profiler.begin();
 //
-        Arrays.sort(arr);
+//        Arrays.sort(arr);
+        quickSort.sort(arr, 0, arr.length -1);
         System.out.println(Profiler.end()/1000.0);
 
         Profiler.begin();
-        quickSort.sort(arr2, 0, arr.length - 1);
+
+        ShellSort.sort(arr2);
+//        quickSort.sort(arr2, 0, arr.length - 1);
 //        MergeInt.sort(arr2);
         System.out.println(Profiler.end()/1000.0);
 //        for (int i : arr){

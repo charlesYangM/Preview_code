@@ -20,6 +20,4 @@ public class ServiceLogAspect {
         System.out.println("leaving " + method.getDeclaringClass().getSimpleName()
                 + " :: " + method.getName() + ", result : " + result);
     }
-
-
 }

@@ -7,7 +7,7 @@ public class PickSort {
     static int[] arr = new int[] {-1,-5,6,-16,5,5,1,1,1,5,-5555,52,1,5,5,2,3,7};
 
     public static void main(String[] args) {
-        sort2(arr);
+        sort(arr);
         for (int i : arr){
             System.out.print(i + " ");
         }

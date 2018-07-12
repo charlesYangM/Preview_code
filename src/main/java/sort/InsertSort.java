@@ -14,14 +14,14 @@ public class InsertSort {
     }
 
     private static void sort(int[] arr) {
-        int temp;
+//        int temp;
         for (int i = 1; i < arr.length; i++) {
             int j = i;
             int target = arr[i]; //待插入的
-            while(j > 0 && arr[j -1] > target){
-                temp = arr[j];
+            while(j > 0 && arr[j -1] > target){//循环中采用移动法 而不是交换法进行
+//                temp = arr[j];
                 arr[j] = arr[j - 1];
-                arr[j - 1] = temp;
+//                arr[j - 1] = temp;
                 j--;
             }
             arr[j] = target;
