@@ -40,6 +40,7 @@ public class DynamicArray<E> {
     }
 
     public static void main(String[] args) {
+
         DynamicArray<Integer> ints = new DynamicArray<>();
         DynamicArray<Number> numbers = new DynamicArray<>();
         DynamicArray<? extends Number> numbers2 = ints;
@@ -51,6 +52,7 @@ public class DynamicArray<E> {
         System.out.println(ints.get(0));
         numbers.add(new Double(3.0));
         numbers.addAll(ints);
+
 //        numbers2.add(1);
 
     }

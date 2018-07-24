@@ -1,6 +1,5 @@
 package stack;
 
-import java.util.IdentityHashMap;
 import java.util.Stack;
 
 /**
@@ -46,12 +45,7 @@ public class MyQueue<T> {
         myQueue.add(1);
         myQueue.add(2);
         myQueue.add(3);
-        myQueue.add(3);
-        myQueue.add(3);
-        myQueue.add(3);
-        myQueue.add(7);
-        myQueue.add(3);
-        myQueue.add(3);
+
 
         while (myQueue.size() > 0){
             System.out.println(myQueue.remove());

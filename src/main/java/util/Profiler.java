@@ -3,6 +3,7 @@ package util;
 import java.util.concurrent.TimeUnit;
 
 /**
+ * 线程安全的计时器可以在多个线程中使用，
  * Created by CharlesYang on 2018/4/9.
  */
 public class Profiler {
