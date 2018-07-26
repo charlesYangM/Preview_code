@@ -22,15 +22,17 @@ public class HeapSort2 {
         }
         int temp;
         for (int i = arr.length - 1; i >= 0; i--) {
+            //将堆顶位置和最后一个元素交换
             temp = arr[0];
             arr[0] = arr[i];
             arr[i] = temp;
+
             heapSort(arr, 0, i-1);
         }
 
     }
 
-    static void heapSort(int[] arr, int parent, int end) {
+    static void heapSort(int[] arr, int parent, int end) {  //调整堆的过程只需要 logN
 
         int child ,temp;
         while( 2 * parent + 1 <= end){
@@ -45,7 +47,5 @@ public class HeapSort2 {
             }
             parent = child;
         }
-
     }
-
 }

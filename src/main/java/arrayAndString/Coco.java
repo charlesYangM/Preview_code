@@ -23,7 +23,7 @@ public class Coco {
             sum += co.get(name[in_name]);
             co.put(name[in_name], co.get(name[in_name])<<1);
             in_name += 1;
-            in_name %= 4;
+            in_name &= (4-1);
         }
         System.out.println(name[pre]);
     }

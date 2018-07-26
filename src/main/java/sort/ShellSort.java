@@ -16,7 +16,7 @@ public class ShellSort {
 
     public static void sort(int[] arr) {
         for (int gap = arr.length / 2; gap > 0; gap /= 2){
-            for (int i = gap;i < arr.length; i++){
+            for (int i = gap;i < arr.length; i++){// 虽然这里是不停的加一操作，但是下面部分的j-gap 保证了 在一个子序列中进行排序
                 int j = i;
                 int target = arr[j];
                 while(j - gap >= 0 && arr[j - gap] > target){

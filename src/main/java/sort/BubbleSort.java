@@ -1,43 +1,45 @@
 package sort;
 
-import util.Profiler;
-
-import java.util.Arrays;
 import java.util.Random;
 
 /**
  * Created by CharlesYang on 2018/7/9/009.
  */
 public class BubbleSort {
-    static int num = 10000000;
+    static int num = 20;
     static int[] arr = new int[num];
     static int[] arr2 = new int[num];
     static Random random = new Random(7);
     public static void main(String[] args) {
 
         for (int i = 0; i < num; i++){
-            arr[i] = random.nextInt(10000000);
+            arr[i] = random.nextInt(20);
         }
 
-//        for (int j = 0; j < 7000; j++){
-//            int randomNum =  random.nextInt(num);
-//            arr[randomNum] = random.nextInt(10000);
-//        }
-        arr2 = Arrays.copyOf(arr, num);
-        System.out.println("sort start");
-        Profiler.begin();
+        sort(arr);
+        for (int i : arr){
+            System.out.print(i + " ");
+        }
 //
-//        Arrays.sort(arr);
-        quickSort.sort(arr, 0, arr.length -1);
-        System.out.println(Profiler.end()/1000.0);
-
-        Profiler.begin();
-
-        ShellSort.sort(arr2);
-//        quickSort.sort(arr2, 0, arr.length - 1);
-//        MergeInt.sort(arr2);
-        System.out.println(Profiler.end()/1000.0);
-//        for (int i : arr){
+////        for (int j = 0; j < 7000; j++){
+////            int randomNum =  random.nextInt(num);
+////            arr[randomNum] = random.nextInt(10000);
+////        }
+//        arr2 = Arrays.copyOf(arr, num);
+//        System.out.println("sort start");
+//        Profiler.begin();
+////
+////        Arrays.sort(arr);
+//        quickSort.sort(arr, 0, arr.length -1);
+//        System.out.println(Profiler.end()/1000.0);
+//
+//        Profiler.begin();
+//
+//        ShellSort.sort(arr2);
+////        quickSort.sort(arr2, 0, arr.length - 1);
+////        MergeInt.sort(arr2);
+//        System.out.println(Profiler.end()/1000.0);
+////        for (int i : arr){
 //            System.out.print(i + " ");
 //        }
     }

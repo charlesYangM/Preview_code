@@ -27,10 +27,10 @@ public class quickSort {
         int i = lo, j = hi + 1;
         int v = arr[lo];
         while(true){
-
             while (arr[++i] < v)if (i == hi)break;
             while (arr[--j] > v)if (j == lo)break;
-            if (i >= j)break;
+            if (i >= j)
+                break;
             swap(arr, i, j);
         }
         return j;

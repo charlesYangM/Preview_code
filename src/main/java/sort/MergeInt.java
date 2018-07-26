@@ -24,7 +24,7 @@ public class MergeInt {
         merge(arr, low, mid, high);
     }
 
-    public static void merge(int[] arr, int low, int mid, int high) {
+    public static void merge(int[] arr, int low, int mid, int high) {//此时的arr已经是上次递归中排序好的，故aux需要重新赋值
 
         int i = low, j = mid + 1;
 
