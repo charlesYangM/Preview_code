@@ -25,7 +25,6 @@ public class HeapSort2 {
             temp = arr[0];
             arr[0] = arr[i];
             arr[i] = temp;
-
             heapSort(arr, 0, i-1);
         }
 
@@ -34,21 +33,17 @@ public class HeapSort2 {
     static void heapSort(int[] arr, int parent, int end) {
 
         int child ,temp;
-//        int right_child = start * 2 + 2;
-        for (; 2 * parent + 1 <= end; parent = child){
+        while( 2 * parent + 1 <= end){
             child = 2 * parent + 1;
-            if (child > end) {
-                return;
-            }
-            if ((child + 1) <= end && arr[child] > arr[child + 1]) {
+            if ((child + 1) <= end && arr[child + 1] < arr[child]) {
                 child += 1;
             }
             if (arr[child] < arr[parent]) {
                 temp = arr[child];
                 arr[child] = arr[parent];
                 arr[parent] = temp;
-//            heapSort(arr, parent, end);
             }
+            parent = child;
         }
 
     }
