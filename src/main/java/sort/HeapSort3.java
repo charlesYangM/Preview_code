@@ -10,36 +10,35 @@ public class HeapSort3 {
     //    static int[] arr = new int[] {-1,-5,6,-16,1,7,9};
     public static void main(String[] args) {
 
-        sort(arr);
-        for (int i : arr) {
+        int k = 11;
+
+        int[] kHeap = new int[k];
+        for (int i = 0; i < k; i ++){
+            heapInsert(kHeap, arr[i], i);
+        }
+
+        for (int i = k; i < arr.length; i++){
+            if (arr[i] < kHeap[0]){
+                kHeap[0] = arr[i];
+                heapify(kHeap, 0, k -1);
+            }
+        }
+        for (int i : kHeap) {
             System.out.print(i + " ");
         }
     }
-    public static void sort(int[] arr) {
-        //初始化堆
-        for (int j = arr.length  / 2 - 1; j >= 0; j--) {
-            heapify(arr, j, arr.length - 1);
-        }
 
-        int temp;
-
-        for (int i = arr.length - 1; i >= 0; i--) {
-            //将堆顶位置和最后一个元素交换
-            temp = arr[0];
-            arr[0] = arr[i];
-            arr[i] = temp;
-
-            heapify(arr, 0, i - 1);
-        }
-
-    }
 
 
     public static void heapInsert(int[] arr, int value, int index){
+        int temp ;
         arr[index] = value;
         while (index != 0){
             int parent = (index - 1) / 2;
             if (arr[parent] < arr[index]){
+                temp = arr[index];
+                arr[index] = arr[parent];
+                arr[parent] = temp;
                 parent = index;
             }else {
                 break;
@@ -51,10 +50,10 @@ public class HeapSort3 {
         int child ,temp;
         while( 2 * parent + 1 <= end){
             child = 2 * parent + 1;
-            if ((child + 1) <= end && arr[child + 1] < arr[child]) {
+            if ((child + 1) <= end && arr[child + 1] > arr[child]) {
                 child += 1;
             }
-            if (arr[child] < arr[parent]) {
+            if (arr[child] > arr[parent]) {
                 temp = arr[child];
                 arr[child] = arr[parent];
                 arr[parent] = temp;
