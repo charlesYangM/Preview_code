@@ -7,7 +7,7 @@ public class PickSort {
     static int[] arr = new int[] {-1,-5,6,-16,5,5,1,1,1,5,-5555,52,1,5,5,2,3,7};
 
     public static void main(String[] args) {
-        sort(arr);
+        sort2(arr);
         for (int i : arr){
             System.out.print(i + " ");
         }
@@ -15,11 +15,9 @@ public class PickSort {
     public static void sort2(int[] arr){
         int temp;
         for (int i = 0; i < arr.length; i++){
-            int min = 0;
+            int min = i;
             for (int j = i + 1; j < arr.length; j ++){
-                if (arr[j] < arr[min]){
-                    min = j;
-                }
+               min = arr[min] < arr[j] ? min : j;
             }
             temp = arr[i];
             arr[i] = arr[min];
