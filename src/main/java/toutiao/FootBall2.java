@@ -4,12 +4,26 @@ import java.util.Scanner;
 
 /**
  * 寻找球迷中的最大球迷数 和 球队数量
+ *
+ * 测试用例：
+ * 10,10
+ 0,0,0,0,0,0,0,0,0,0
+ 0,0,0,1,1,0,1,0,0,0
+ 0,1,0,0,0,0,0,1,0,1
+ 1,0,0,0,0,0,0,0,1,1
+ 0,0,0,1,1,1,0,0,0,1
+ 0,0,0,0,0,0,1,0,1,1
+ 0,1,1,0,0,0,0,0,0,0
+ 0,0,0,1,0,1,0,0,0,0
+ 0,0,1,0,0,1,0,0,0,0
+ 0,1,0,0,0,0,0,0,0,0
+
  * Created by CharlesYang on 2018/8/14/014.
  */
 public class FootBall2 {
     static int P;
     static int qMax;
-    static int Q;
+    static int Q = Integer.MIN_VALUE;
 
     static class Fan {
         int value;
